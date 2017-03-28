@@ -1684,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e2ff0f;
+  background: #18abd9;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2632,6 +2632,13 @@ span.category-list-count {
 .highlight {
   border-radius: 5px;
   border: solid 1px #ccc;
+  background-color: #fcfcfc;
+}
+.highlight .gutter pre {
+  background-color: #f7f7f7;
+}
+td.code pre {
+  background-color: #fcfcfc !important;
 }
 blockquote {
   border-radius: 5px;
