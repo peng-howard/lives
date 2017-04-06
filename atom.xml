@@ -226,24 +226,6 @@
   </entry>
   
   <entry>
-    <title>我眼里的blog</title>
-    <link href="http://peng-howard.github.io/lives/2007/12/02/blog/"/>
-    <id>http://peng-howard.github.io/lives/2007/12/02/blog/</id>
-    <published>2007-12-01T16:00:00.000Z</published>
-    <updated>2017-03-27T05:40:29.684Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最先对 blog 有概念是从 MSN Spaces 开始的，那时候特别慢，也就一直没用过，那时候国内还没几人对 blog 这个词有听过的。 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="lives" scheme="http://peng-howard.github.io/lives/categories/lives/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>杂博</title>
     <link href="http://peng-howard.github.io/lives/2007/12/02/micro-blog/"/>
     <id>http://peng-howard.github.io/lives/2007/12/02/micro-blog/</id>
@@ -260,6 +242,24 @@
 &lt;li&gt;&lt;p&gt;2010-12-6：小区门口的那棵树开花了，一片红霞在冬天里更显耀眼和温暖。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="lives" scheme="http://peng-howard.github.io/lives/categories/lives/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我眼里的blog</title>
+    <link href="http://peng-howard.github.io/lives/2007/12/02/blog/"/>
+    <id>http://peng-howard.github.io/lives/2007/12/02/blog/</id>
+    <published>2007-12-01T16:00:00.000Z</published>
+    <updated>2017-03-27T05:40:29.684Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最先对 blog 有概念是从 MSN Spaces 开始的，那时候特别慢，也就一直没用过，那时候国内还没几人对 blog 这个词有听过的。 &lt;/p&gt;
     
     </summary>
     
