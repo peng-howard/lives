@@ -316,6 +316,11 @@ em {
   text-align: center;
   font-style: normal;
 }
+table {
+  border-collapse: separate !important;
+  border-bottom: none;
+  table-layout: auto;
+}
 ::selection {
   background-color: #000;
   color: #0f0;

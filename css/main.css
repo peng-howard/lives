@@ -1684,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8f09;
+  background: #ff7ff4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2823,6 +2823,11 @@ em {
   display: block;
   text-align: center;
   font-style: normal;
+}
+table {
+  border-collapse: separate !important;
+  border-bottom: none;
+  table-layout: auto;
 }
 ::selection {
   background-color: #000;
