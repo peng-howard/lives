@@ -5,7 +5,7 @@
   <link href="/lives/atom.xml" rel="self"/>
   
   <link href="http://peng-howard.github.io/lives/"/>
-  <updated>2017-03-27T05:53:08.660Z</updated>
+  <updated>2017-04-16T15:09:48.440Z</updated>
   <id>http://peng-howard.github.io/lives/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://peng-howard.github.io/lives/2012/01/09/JangBi/"/>
     <id>http://peng-howard.github.io/lives/2012/01/09/JangBi/</id>
     <published>2012-01-08T16:00:00.000Z</published>
-    <updated>2017-03-27T05:53:08.660Z</updated>
+    <updated>2017-04-16T15:09:48.440Z</updated>
     
     <summary type="html">
     
@@ -219,9 +219,9 @@
       <category term="music" scheme="http://peng-howard.github.io/lives/categories/music/"/>
     
     
-      <category term="粤语老歌" scheme="http://peng-howard.github.io/lives/tags/%E7%B2%A4%E8%AF%AD%E8%80%81%E6%AD%8C/"/>
-    
       <category term="音乐" scheme="http://peng-howard.github.io/lives/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+      <category term="粤语老歌" scheme="http://peng-howard.github.io/lives/tags/%E7%B2%A4%E8%AF%AD%E8%80%81%E6%AD%8C/"/>
     
   </entry>
   
