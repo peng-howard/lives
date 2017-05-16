@@ -1684,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #acff0d;
+  background: #f9f13b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2538,9 +2538,38 @@ embed {
   src: url("/lives/lib/font-Galdeano/galdeano-webfont.woff2") format('woff2'), url("/lives/lib/font-Galdeano/galdeano-webfont.woff") format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alegreya'), local('Alegreya-Regular'), url("/lives/lib/fonts/alegreya-regular.woff2") format('woff2'), url("/lives/lib/fonts/alegreya-regular.woff") format('woff');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Alegreya Italic'), local('Alegreya-Italic'), url("/lives/lib/fonts/alegreya-italic.woff2") format('woff2'), url("/lives/lib/fonts/alegreya-italic.woff") format('woff');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Mono'), local('PTMono-Regular'), url("/lives/lib/fonts/pt-mono-regular.woff2") format('woff2'), url("/lives/lib/fonts/pt-mono-regular.woff") format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url("/lives/lib/fonts/source-sans-pro-regular.woff2") format('woff2'), url("/lives/lib/fonts/source-sans-pro-regular.woff") format('woff');
+}
+body,
+.post-body {
+  font-size: 19px;
+  font-family: 'Alegreya', 'Palatino Linotype', 'Book Antiqua', Palatino, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', '仿宋', 'FangSong', 'NSimSun', 'Microsoft YaHei', serif !important;
+  color: #333;
+}
 body {
   background: #f3f3f3 url("/lives/images/bg.png") repeat;
-  font-size: 18px;
 }
 .post-title {
   font-size: 42px !important;
@@ -2549,11 +2578,13 @@ body {
 }
 a.post-title-link {
   font-size: 42px !important;
-  color: #2dbe60 !important;
+  color: #333 !important;
   font-weight: bold !important;
 }
 a.post-title-link:hover {
   text-decoration: none !important;
+  background: transparent;
+  border-top: none;
 }
 .post-title-link span {
   font-size: 18px !important;
@@ -2567,11 +2598,17 @@ article.post-type-normal {
   margin: 30px 0 !important;
 }
 .post-title-link::before {
-  background-color: #2dbe60 !important; /* 下划线不是 underline, text-decoratioin, border-bottom，而是 bg-color */
+  background-color: #aceac8 !important; /* 下划线不是 underline, text-decoratioin, border-bottom，而是 bg-color */
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Alegreya', 'Palatino Linotype', 'Book Antiqua', Palatino, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', '仿宋', 'FangSong', 'NSimSun', 'Microsoft YaHei', serif !important;
 }
 h1 {
   font-size: 36px;
-  color: #2dbe60;
+  color: #333 !important;
 }
 h2 {
   font-size: 28px;
@@ -2595,41 +2632,88 @@ h3 code {
 h4 code {
   font-size: 20px;
 }
+a:link,
+a:visited {
+  border-bottom: solid 3px #aceac8;
+}
+a:hover {
+  color: #555;
+  border-bottom: solid 3px #aceac8;
+  background-color: #aceac8;
+  border-top: solid 1px #aceac8;
+}
 .headband {
   display: none;
 }
 .header-inner {
   padding: 0;
 }
+.site-nav-toggle {
+  top: 19px;
+}
+@media (max-width: 767px) {
+  .custom-logo-site-title {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+  }
+  .site-nav {
+    background-color: #f6f6f6;
+  }
+}
 .brand {
-  margin-top: 45px;
+  margin-top: 0px;
 /* display: none; */
   color: #555;
   background-color: transparent;
+  border: none !important;
 }
 .brand:hover {
   color: #2dbe60;
+  background: transparent;
+  border: none;
 }
 .brand span.site-title {
   font-size: 24px;
   font-weight: bold;
 }
+header#header {
+  margin-top: 0px !important;
+  background-color: rgba(0,0,0,0.06);
+  min-height: 40px;
+  padding-top: 3px;
+  padding-bottom: 38px;
+  border-bottom: solid 1px #e1e1e1;
+}
+#menu li a i,
+#menu li a br {
+  display: none;
+}
+.site-brand-wrapper {
+  display: inline-block;
+  float: left;
+  padding-top: 18px;
+}
+.menu {
+  float: right;
+}
+.menu li {
+  float: left !important; /* 此时导航栏顺序刚好颠倒，需要在配置文件中也颠倒一次 */
+  margin-right: 0px !important;
+  margin-left: 2em !important;
+}
 .menu li a {
-  border: solid 2px #bbb !important;
-  background-color: #fefefe;
-  border-radius: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 60px;
-  margin: 20px;
+  font-size: 18px !important;
+  color: #222;
 }
 .menu li a:hover {
-  color: #2dbe60;
-  border-color: #2dbe60 !important;
-  background-color: #f0fad2;
-  font-weight: bold;
-  transition-property: all;
-  transition-duration: 0.5s;
+  border-bottom: solid 2px #aaa !important;
+  color: #222;
+  background: transparent;
+  border-top: none;
+}
+a.brand {
+  padding: 0px; /* 默认有 40px */
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .menu-item-icon {
@@ -2646,15 +2730,16 @@ h4 code {
     padding-left: 0px;
   }
 }
+*
 .category-list-item {
   display: inline;
 }
 .category-list-item a {
-  margin-top: -2em;
+  margin-top: -38px;
   padding: 0.7em 1em;
   display: block;
   font-size: 18px;
-  color: #2dbe60;
+  color: #333;
   font-weight: bold;
   border-bottom: dashed 1px #ccc !important;
 }
@@ -2663,6 +2748,7 @@ h4 code {
   color: #2dbe60;
   font-weight: bold;
   background-color: #e3e3e3;
+  border-top: none;
 }
 span.category-list-count {
   float: right;
@@ -2704,6 +2790,7 @@ ol.footnotes-list li p {
   font-size: 10px !important;
 }
 blockquote {
+  color: #000;
   border-radius: 5px;
   border-left: solid 8px #ccc;
   border-right: solid 1px #ccc;
@@ -2712,6 +2799,7 @@ blockquote {
   background-color: #f8f8f8;
   padding-top: 0px;
   margin-bottom: 20px;
+  font-family: 'Alegreya', 'Palatino Linotype', 'Book Antiqua', Palatino, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
 }
 blockquote p {
   margin: 10px 0;
@@ -2722,35 +2810,44 @@ code {
   padding: 3px 4px;
   color: #090;
   background-color: #f2f9f4;
+  font-family: 'PT Mono', 'STKaiti', 'KaiTi', 'SimKai', monospace;
 }
 pre {
-  font-size: 15px;
+  font-size: 14px !important;
   border: solid 1px #ccc;
   border-radius: 5px;
 /* knitr 会专门做一个没有底色的css，所以这里不会起作用 background-color: #333; */
   padding: 20px 25px;
   overflow-x: hidden;
+  font-family: 'PT Mono', 'STKaiti', 'KaiTi', 'SimKai', monospace;
 }
 pre.white {
-  font-size: 15px;
+  color: #000;
+  font-size: 17px !important;
   background-color: #fefefe;
 }
 pre.center {
   text-align: center !important;
   line-height: 2em;
-  font-size: 18px;
+  font-size: 19px !important;
   border: none;
   background-color: transparent;
   padding: 0px;
 }
 pre code {
-  font-size: 15px;
+  font-size: 17px;
   padding: 0px; /* 段落中的 code 左边的 padding=4px 会导致 pre 中的 code 第一行左边相对下面的其它行有一个向右的偏移 */
   background-color: transparent;
   color: #000;
   white-space: pre-wrap; /* 让 code 标记中的内容过宽时自动换行，不能用 normal，否则换行符也消失了 */
 }
+.sidebar-nav-toc,
+.sidebar-nav-overview,
+.links-of-blogroll-title {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+}
 .sidebar-nav .sidebar-nav-active {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   color: #2dbe60 !important;
   border-bottom-color: #2dbe60 !important;
 }
@@ -2758,21 +2855,61 @@ pre code {
   color: #0f0 !important;
   border-bottom-color: #0f0 !important;
 }
+.feed-link a:link {
+/* RSS */
+  border: solid 1px #f46123;
+}
+.links-of-author-item a:link,
+.links-of-blogroll-item a:link {
+/* 个人信息、友情链接 */
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  border-bottom: solid 1px #555;
+}
+.links-of-author-item a:hover,
+.links-of-blogroll-item a:hover {
+  border-bottom: solid 1px #555;
+  background: transparent;
+  border-top: none;
+}
+.site-state-item a:link {
+/* 文章数等 */
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  border: none;
+}
+.site-state-item a:hover {
+  border: none;
+  background: transparent;
+}
+a.nav-link {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  border-bottom: solid 1px #555 !important;
+}
+a.nav-link:hover {
+  background: transparent;
+  border-top: none;
+  border-bottom: solid 1px #ccc !important;
+}
 .active a {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   color: #bbb !important;
-  border-bottom-color: #bbb !important;
+  border-bottom: solid 1px #bbb !important;
 }
 .active a:hover {
   color: #0f0 !important;
   border-bottom-color: #0f0 !important;
+  background: transparent;
+  border-top: none;
 }
 .active-current a {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
   color: #2dbe60 !important;
-  border-bottom-color: #2dbe60 !important;
+  border-bottom: solid 1px #2dbe60 !important;
 }
 .active-current a:hover {
   color: #0f0 !important;
   border-bottom-color: #0f0 !important;
+  background: transparent;
+  border-top: none;
 }
 .sidebar-toggle {
   background-color: #bcbcbc !important;
@@ -2794,10 +2931,11 @@ strong {
   color: #2dbe60;
 }
 .btn {
-  border-color: #bbb;
+  border: solid 2px #bbb !important;
   background-color: #f7f7f7 !important;
   color: #000 !important;
   border-radius: 5px !important;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
 }
 .btn:hover {
   border-color: #2dbe60 !important;
@@ -2817,19 +2955,40 @@ a.page-number:hover {
   background-color: #ccc !important;
   transition: none;
   color: #fff;
-  font-weight: bold;
 }
 .post-tags a {
   background-color: #f7f7f7;
   border: solid 2px #bbb;
   padding: 2px 4px;
   border-radius: 5px;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif !important;
 }
 .post-tags a:hover {
   background-color: #f0fad2;
   border: solid 2px #2dbe60;
   padding: 2px 4px;
   border-radius: 5px;
+}
+.post-nav-item a:link {
+  font-size: 16px;
+  border: none !important;
+}
+.post-nav-item a:hover {
+  color: #222;
+  background: transparent;
+}
+.post-time {
+/* 存档页时间 */
+  font-size: 13px;
+  font-family: Galdeano, Helvetica, "Microsoft YaHei", sans-serif;
+}
+a.fancybox-close:link,
+a.fancybox-nav:link {
+  border-bottom: none !important;
+}
+a.fancybox-close:hover,
+a.fancybox-nav:hover {
+  background-color: transparent;
 }
 .copyright {
   font-family: Galdeano, Helvetica, "Microsoft YaHei", sans-serif;
@@ -2841,6 +3000,8 @@ a.page-number:hover {
 }
 .copyright a:hover {
   color: #236e25;
+  background: transparent;
+  border-top: none;
 }
 .copyright .with-love {
   font-size: 15px;
